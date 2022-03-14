@@ -2321,11 +2321,11 @@
         {
           "_params": {
             "autoplay": true,
-            "animType": "basic_linear",
-            "theme": "absent",
+            "animType": "stack",
+            "theme": "cloud",
             "slides": [
               {
-                "image": "@PROJECT_PATH@/assets/images/dsc09881-1024x576.jpg",
+                "image": "@PROJECT_PATH@/assets/images/dsc09881-1-1024x576.jpg",
                 "linkUrl": "http://google.com",
                 "link": false,
                 "src": "@PROJECT_PATH@/assets/images/dsc09881-2000x1125.jpg",
@@ -2336,7 +2336,7 @@
                 "alt": ""
               },
               {
-                "image": "@PROJECT_PATH@/assets/images/dsc09837-1024x576.jpg",
+                "image": "@PROJECT_PATH@/assets/images/dsc09837-1-1024x576.jpg",
                 "linkUrl": "http://google.com",
                 "link": false,
                 "src": "@PROJECT_PATH@/assets/images/dsc09837-1900x1068.jpg",
@@ -2347,7 +2347,7 @@
                 "alt": ""
               },
               {
-                "image": "@PROJECT_PATH@/assets/images/dsc09838-1-1024x576.jpg",
+                "image": "@PROJECT_PATH@/assets/images/dsc09838-2-1024x576.jpg",
                 "linkUrl": "http://google.com",
                 "link": false,
                 "src": "@PROJECT_PATH@/assets/images/dsc09838-2000x1125.jpg",
@@ -2358,7 +2358,7 @@
                 "alt": ""
               },
               {
-                "image": "@PROJECT_PATH@/assets/images/dsc09890-2000x1125.jpg",
+                "image": "@PROJECT_PATH@/assets/images/dsc09881-1-1024x576.jpg",
                 "linkUrl": "http://google.com",
                 "link": false,
                 "src": "@PROJECT_PATH@/assets/images/dsc09881-2000x1125.jpg",
@@ -2369,7 +2369,7 @@
                 "alt": ""
               },
               {
-                "image": "@PROJECT_PATH@/assets/images/dsc09891-2000x1125.jpg",
+                "image": "@PROJECT_PATH@/assets/images/dsc09881-2-1024x576.jpg",
                 "linkUrl": "http://google.com",
                 "link": false,
                 "src": "@PROJECT_PATH@/assets/images/dsc09881-2000x1125.jpg",
@@ -2380,7 +2380,7 @@
                 "alt": ""
               },
               {
-                "image": "@PROJECT_PATH@/assets/images/dsc09935-2000x1125.jpg",
+                "image": "@PROJECT_PATH@/assets/images/dsc09881-2-1024x576.jpg",
                 "linkUrl": "http://google.com",
                 "link": false,
                 "src": "@PROJECT_PATH@/assets/images/dsc09881-2000x1125.jpg",
