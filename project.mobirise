@@ -84,7 +84,7 @@
     "gdpr": false,
     "global_footer_custom": "<script  src=\"https://cdn.ratina.co/js/helper-v11.js?c=b&l=en\" ></script>",
     "global_header_custom": "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>",
-    "uniqCompNum": 41,
+    "uniqCompNum": 43,
     "versionPublish": "5.4.1",
     "screenshot": "screenshot.png"
   },
@@ -759,11 +759,14 @@
           "_styles": {
             "padding-top": "(@paddingTop * 1rem)",
             "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
+            "h5, h6, p": {
+              "margin": "0"
             },
             ".card": {
               "background-color": "@cardBgColor",
@@ -771,24 +774,128 @@
               "border-style": "dashed",
               "border-color": "@borderColor",
               "border-radius": "30px",
-              "padding": "2rem 4rem",
-              "@media (max-width: 767px)": {
-                "padding-left": "3rem",
-                "padding-right": "3rem"
-              },
+              "padding": "0 3rem",
               "& when not (@cardBg)": {
                 "background": "transparent"
               },
               "& when not (@border)": {
                 "border": "none"
               }
+            },
+            ".image-wrapper": {
+              "height": "100%",
+              "display": "flex",
+              "align-items": "center",
+              "@media (max-width: 991px)": {
+                "margin-top": "50px",
+                "max-width": "330px",
+                "margin": "2rem auto"
+              },
+              "img": {
+                "width": "100%",
+                "object-fit": "cover",
+                "border-radius": "15px"
+              }
+            },
+            ".title-wrap": {
+              "height": "100%",
+              "display": "flex",
+              "flex-direction": "column",
+              "padding": "4rem 2rem",
+              "@media (max-width: 991px)": {
+                "justify-content": "center",
+                "text-align": "center",
+                "padding-right": "0",
+                "padding-left": "0",
+                "padding-bottom": "2rem"
+              }
+            },
+            ".text-wrapper": {
+              "height": "100%",
+              "padding": "4rem 0 4rem 3rem",
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "space-between",
+              "@media (max-width: 1399px)": {
+                "padding-left": "1rem"
+              },
+              "@media (max-width: 991px)": {
+                "text-align": "center",
+                "padding-top": "0",
+                "padding-left": "0"
+              }
+            },
+            ".icon-section": {
+              "display": "flex",
+              "align-items": "center",
+              "justify-content": "space-between",
+              "@media (min-width: 992px) and (max-width: 1199px)": {
+                "flex-wrap": "wrap"
+              },
+              "@media (max-width: 991px)": {
+                "justify-content": "center",
+                "margin-top": "2rem"
+              },
+              "@media (max-width: 449px)": {
+                "flex-wrap": "wrap"
+              },
+              ".podcast": {
+                "display": "flex",
+                "align-items": "center",
+                "@media (max-width: 449px)": {
+                  "width": "100%",
+                  "justify-content": "center"
+                }
+              }
+            },
+            ".mbr-iconfont": {
+              "color": "#33d5ad",
+              "font-size": "1.5rem",
+              "margin-right": "0.5rem",
+              "vertical-align": "middle"
+            },
+            ".social-row": {
+              "display": "flex",
+              "justify-content": "space-between",
+              "@media (min-width: 992px) and (max-width: 1199px)": {
+                "margin-top": "1rem"
+              },
+              "@media (max-width: 991px)": {
+                "margin-left": "2rem"
+              },
+              "@media (max-width: 449px)": {
+                "margin-left": "0",
+                "margin-top": "2rem"
+              },
+              ".soc-item": {
+                "display": "flex",
+                "align-items": "center",
+                "justify-content": "center",
+                "margin-right": "0rem",
+                ".mbr-iconfont": {
+                  "color": "#e3d6eb",
+                  "font-size": "2rem"
+                }
+              }
+            },
+            ".card-title": {
+              "margin-bottom": "2.2rem",
+              "text-align": "center"
+            },
+            ".mbr-section-btn": {
+              "margin-top": "45.4px"
+            },
+            ".card-subtitle": {
+              "color": "#7a736d"
             }
           },
-          "_name": "article3",
+          "_name": "features3",
           "_sourceTheme": "snackm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article3\" group=\"Article\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"10\" step=\"1\">\n        <header>Card</header>\n        <input type=\"checkbox\" title=\"Background\" name=\"cardBg\" checked>\n        <input type=\"color\" title=\"Color\" name=\"cardBgColor\" value=\"#e6dcd1\" condition=\"cardBg\">\n        <input type=\"checkbox\" title=\"Border\" name=\"border\" checked>\n        <input type=\"color\" title=\"Color\" name=\"borderColor\" value=\"#aa2c61\" condition=\"border\">\n        <input type=\"range\" name=\"bordertWidth\" title=\"Width\" min=\"1\" max=\"5\" value=\"1\" step=\"1\" condition=\"border\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background5.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 col-lg-{{textWidth}}\">\n                <div class=\"card\">\n                    <p class=\"mbr-text align-center mbr-fonts-style my-4\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\"><b>من نحن</b><br><b><br></b><br>بدأ مصنع عالم حواء نشاطه عام 1996 فى الخُبر بالمنطقة الشرقية فى إنتاج الأثاث الداخلى و فى عام 2005 أضاف تخصص إنتاج المطابخ الخشب و الألومنيوم ( مودرن و كلاسيك ) و خزائن الملابس الخشبيه و الألومنيوم . و بعد سنوات من الخبرة و مع توسع فروعنا فى أهم مدن المملكة العربية السعودية ، فقد أصبح مصنع مطابخ عالم حواء ذو سمعة جيده و مكانه عاليه كمصنع متخصص فى مجال إنتاج الأثاث الداخلى ، والمطابخ الخشبية و الألومنيوم ، والخزائن الخشب و الألومنيوم . و نسعى دائما&nbsp;جاهدين للحفاظ على تلك المكانة .&nbsp;<br></p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "sZtVbVWU1C",
-          "_anchor": "article3-0",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"features3\" group=\"Features\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Social\" name=\"showSocial\">\n        <input type=\"range\" name=\"socialCount\" title=\"Social Count\" min=\"1\" max=\"4\" step=\"1\" value=\"1\" condition=\"showSocial\">\n        <header>Card</header>\n        <input type=\"checkbox\" title=\"Background\" name=\"cardBg\" checked>\n        <input type=\"color\" title=\"Color\" name=\"cardBgColor\" value=\"#f8f5fa\" condition=\"cardBg\">\n        <input type=\"checkbox\" title=\"Border\" name=\"border\" checked>\n        <input type=\"color\" title=\"Color\" name=\"borderColor\" value=\"#aa2c61\" condition=\"border\">\n        <input type=\"range\" name=\"bordertWidth\" title=\"Width\" min=\"1\" max=\"5\" value=\"1\" step=\"1\" condition=\"border\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"card\">\n            <div class=\"row\">\n                <div class=\"col-12 col-lg-3\">\n                    <div class=\"image-wrapper\">\n                        <img src=\"@PROJECT_PATH@/assets/images/logo-with-name-1-500x500.png\" alt=\"Mobirise\">\n                    </div>\n                </div>\n                <div class=\"col-12 col-lg-3\">\n                    <div class=\"title-wrap\">\n                        <h5 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">من نحن</h5>\n                        <h6 class=\"card-subtitle mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".card-subtitle\">\n                            لماذا نحن</h6>\n                    </div>\n                </div>\n                <div class=\"col-12 col-lg-6\">\n                    <div class=\"text-wrapper\">\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">بدأ مصنع عالم حواء نشاطه عام 1996 فى الخُبر بالمنطقة الشرقية فى إنتاج الأثاث الداخلى و فى عام 2005 أضاف تخصص إنتاج المطابخ الخشب و الألومنيوم ( مودرن و كلاسيك ) و خزائن الملابس الخشبيه و الألومنيوم . و بعد سنوات من الخبرة و مع توسع فروعنا فى أهم مدن المملكة العربية السعودية ، فقد أصبح مصنع مطابخ عالم حواء ذو سمعة جيده و مكانه عاليه كمصنع متخصص فى مجال إنتاج الأثاث الداخلى ، والمطابخ الخشبية و الألومنيوم ، والخزائن الخشب و الألومنيوم . و نسعى دائما جاهدين للحفاظ على تلك المكانة .&nbsp;</p>\n                        <div class=\"icon-section\">\n                            <div class=\"podcast\">\n                                <div class=\"icon-wrapper\">\n                                    <span mbr-icon class=\"mbr-iconfont mobi-mbri-play mobi-mbri\" style=\"color: rgb(170, 44, 97); fill: rgb(170, 44, 97);\"></span>\n                                </div>\n                                <h5 class=\"tab-title-add mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".tab-title-add\">\n                                    <b>.</b>\n                                </h5>\n                            </div>\n                            <div class=\"social-row display-7\" mbr-if=\"showSocial\">\n                                <div class=\"soc-item\">\n                                    <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-apple\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount > 1\">\n                                    <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-facebook\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount > 2\">\n                                    <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-google\"></span>\n                                    </a>\n                                </div>\n                                <div class=\"soc-item\" mbr-if=\"socialCount > 3\">\n                                    <a href=\"https://twitter.com/mobirise\" target=\"_blank\">\n                                        <span mbr-icon class=\"mbr-iconfont socicon socicon-youtube\"></span>\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "t03nmfJ3St",
+          "_anchor": "features3-16",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
           "_protectedParams": [],
           "_global": false,
           "_once": false,
