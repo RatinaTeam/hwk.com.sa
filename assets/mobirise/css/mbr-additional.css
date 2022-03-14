@@ -1757,6 +1757,7 @@ a {
   padding-bottom: 6rem;
   background-color: #ffffff;
   direction: ltr;
+  overflow-y: hidden;
 }
 .cid-t02RignEtA .item:focus,
 .cid-t02RignEtA span:focus {
