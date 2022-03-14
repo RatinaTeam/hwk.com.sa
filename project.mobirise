@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "index.html",
+    "currentPage": "product1.html",
     "theme": {
       "name": "snackm5",
       "title": "SnackM5",
@@ -2417,7 +2417,7 @@
           "_name": "wowslider",
           "_sourceTheme": "snackm5",
           "_anchor": "wowslider-t",
-          "_customCSS": "direction:ltr;"
+          "_customCSS": ""
         },
         {
           "alias": false,
